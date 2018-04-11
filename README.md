@@ -4,7 +4,9 @@ Django allows us to build powerfull web applications in a relative short time. T
 
 ## Install virtualenv & virtualenvwrapper
 
-The standard for Django projects is to isolate them inside of virtual environments. This way we prevent dependencies to conflict with eachother if we're working on multiple projects. Also we need to setup different working environments.
+When we install Django, it's not ready for production at all. The settings for a production ready Django project is different than from a development environment. If you are new to Django or building web applications in general this can seem frustrating, but it's important to know how you setup your Django project.
+
+The standard for Django projects is to isolate them inside of virtual environments. This way we prevent dependencies to conflict with eachother if we're working on multiple projects.
 
 Virtualenv is a tool to create such environments. You can install it by using pip:
 
@@ -23,8 +25,7 @@ or your package manager if your on Linux. Below an example if your on Ubuntu:
 $ sudo apt install virtualenvwrapper
 ```
 
-
-## Creating our virtual enviroment
+## Creating our virtual environment
 In your terminal type `$ which python3` to know your Python3 path. In my case it was:
 ```
 $ /usr/bin/python3
@@ -144,9 +145,9 @@ INSTALLED_APPS += [
 
 ## Configuring different hooks
 
-Because we are using virtualenvwrapper, we have an easy way to specify the virtual environment to work with the correct settings file. Right now if we want to run our server it will most likely give us an error. We are goint specify the *development.py* settings for our `(myproject_dev)` virtual environment. 
+Because we are using virtualenvwrapper, we have an easy way to specify the virtual environment to work with the correct settings file. Right now if we want to run our server it will most likely give us an error. We need to specify the *development.py* settings file for our `(myproject_dev)` virtual environment. 
 
-Follow the following steps inside of your terminal:
+Follow these steps inside of your terminal:
 ```
 $ workon myproject_dev
 $ cd $VIRTUAL_ENV/bin
